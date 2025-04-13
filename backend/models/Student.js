@@ -27,27 +27,6 @@ const studentSchema = new mongoose.Schema({
             type: mongoose.Schema.Types.ObjectId,
             ref: 'User'
         }
-    }],
-    editRequests: [{
-        field: String,
-        newValue: String,
-        status: {
-            type: String,
-            enum: ['pending', 'approved', 'rejected'],
-            default: 'pending'
-        },
-        message: String
-    }],
-    markRequests: [{
-        subject: String,
-        currentMarks: Number,
-        requestedMarks: Number,
-        status: {
-            type: String,
-            enum: ['pending', 'approved', 'rejected'],
-            default: 'pending'
-        },
-        message: String
     }]
 }, {
     timestamps: true
